@@ -3931,7 +3931,7 @@ int main(void)
 {
  80018f8:	b580      	push	{r7, lr}
  80018fa:	af00      	add	r7, sp, #0
-   if (SysTick_Config(SystemCoreClock/1000)) {
+	if (SysTick_Config(SystemCoreClock / 1000)) {
  80018fc:	4b0a      	ldr	r3, [pc, #40]	; (8001928 <main+0x30>)
  80018fe:	681b      	ldr	r3, [r3, #0]
  8001900:	4a0a      	ldr	r2, [pc, #40]	; (800192c <main+0x34>)
@@ -3942,10 +3942,9 @@ int main(void)
  800190e:	4603      	mov	r3, r0
  8001910:	2b00      	cmp	r3, #0
  8001912:	d000      	beq.n	8001916 <main+0x1e>
-      while (true)  // Capture error
-          ;
+		while (true);
  8001914:	e7fe      	b.n	8001914 <main+0x1c>
-   }
+	}  // Capture error;
 
    gsw_init();
  8001916:	f7ff ff73 	bl	8001800 <gsw_init>
@@ -3956,8 +3955,7 @@ int main(void)
    tmr_sample_init();
  8001922:	f000 f9f9 	bl	8001d18 <tmr_sample_init>
 
-   while (true)
-      ;
+   while (true);
  8001926:	e7fe      	b.n	8001926 <main+0x2e>
  8001928:	20000010 	.word	0x20000010
  800192c:	10624dd3 	.word	0x10624dd3
