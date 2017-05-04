@@ -1,0 +1,20 @@
+
+Code clean up
+Write blog article
+
+
+
+DONE
+====
+Rename repository adc_dsp_dac
+Finish setting up the ADC parameters properly
+Finish setting up the DAC parameters properly
+Update READMEs
+Remove timer.c/h and led modules
+Remove GDB targets and stuff like that in Makefile
+Write a digital filter to filter the ramp ...?
+FIX BUILD, remove all the USB crap, fix lseek, read etc problem
+(Maybe look at Blinky example for this?)
+ * Why does adc_dac need syscalls.c, but blinky doesn't?!?
+ * Tried copying to Blinky tree (so that it would use the STM FW directory from there... still didn't work
+ * PROBLEM was the asserts in the LED driver - don't do this.  =)
